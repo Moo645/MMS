@@ -1,0 +1,21 @@
+<%= render 'shared/search_products' %>
+
+<table class="table is-hoverable is-fullwidth">
+  <thead>
+    <tr>
+    <th>產品ID</th>
+    <th>產品編號</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |m| %> 
+      <tr>
+        <td><%= m.id %></td>
+        <td><%= m.product_no %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>

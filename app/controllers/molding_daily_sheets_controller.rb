@@ -1,0 +1,2 @@
+class MoldingDailySheetsController < ApplicationController
+end

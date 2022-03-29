@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  molding_daily_sheet_id: 1
+  molding_detail_no: MyString
+  molding_cycle: 1
+  molding_lot_weight: 9.99
+
+two:
+  molding_daily_sheet_id: 1
+  molding_detail_no: MyString
+  molding_cycle: 1
+  molding_lot_weight: 9.99

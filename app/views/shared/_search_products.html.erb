@@ -1,0 +1,16 @@
+<% # using for searching products %>
+
+<%= form_with url: products_path, method: :get do |s| %>
+  <div class="level-item">
+    <div class="field has-addons">
+      <p class="control">
+        <%= s.text_field :product_no, class: 'input is-link', placeholder: '輸入欲查詢的產品編號' %>
+      </p>
+      <p class="control">
+        <%= s.submit '搜尋', class: 'button is-link' %>
+      </p>
+    </div>
+  </div>
+  <% end %>
+
+<hr>

@@ -1,0 +1,2 @@
+class MoldingDetailsController < ApplicationController
+end

@@ -13,29 +13,32 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
+      <%= link_to "首頁", root_path, class: 'navbar-item' %>
 
-      <a class="navbar-item">
-        Documentation
-      </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          基本資料
         </a>
-
         <div class="navbar-dropdown">
+          <%= link_to "創建產品", new_product_path, class: 'navbar-item' %>
+          <%= link_to "產品清單", products_path, class: 'navbar-item' %>
+
+          <hr class="navbar-divider">
           <a class="navbar-item">
-            About
+            Report an issue
           </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          製造命令
+        </a>
+        <div class="navbar-dropdown">
+          <%= link_to "創建製令", new_manufacturing_order_path, class: 'navbar-item' %>
+          <%= link_to "查看製令", manufacturing_orders_path, class: 'navbar-item' %>
+
           <hr class="navbar-divider">
           <a class="navbar-item">
             Report an issue

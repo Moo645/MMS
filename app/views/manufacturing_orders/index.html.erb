@@ -1,0 +1,25 @@
+<table class="table is-hoverable is-fullwidth">
+  <thead>
+    <tr>
+    <th>製令ID</th>
+    <th>製令編號</th>
+    <th>產品ID</th>
+    <th>生產數量</th>
+    <th>訂單數量</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manufacturing_orders.each do |m| %> 
+      <tr>
+        <td><%= m.id %></td>
+        <td><%= m.manufacturing_order_no %></td>
+        <td><%= m.product_id %></td>
+        <td><%= m.production_quantity %></td>
+        <td><%= m.order_quantity %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>

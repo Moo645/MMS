@@ -1,0 +1,41 @@
+<% #search and select product %>
+<% # 1. input box => has drop down => autocomplete %>
+<% # 2. input box => list and check box or btn => click %>
+<% # remark:  %>
+
+<%= form_for manufacturing_order do |f| %>
+
+  <div class="field">
+    <%= f.label :product_id, "產品ID (要改成用選的產品編號)(或是改用drop_down+atuo_complete)(need Redis?)", class: 'label' %>
+    <div class='control'>
+    <%= f.text_field :product_id, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :manufacturing_order_no, "製令編號", class: 'label' %>
+    <div class='control'>
+    <%= f.text_field :manufacturing_order_no, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :production_quantity, "生產數量", class: 'label' %>
+    <div class='control'>
+    <%= f.text_field :production_quantity, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :order_quantity, "訂單數量", class: 'label' %>
+    <div class='control'>
+    <%= f.text_field :order_quantity, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.submit '創建製令', class: 'button is-link' %>
+    </div>
+  </div>
+<% end %>

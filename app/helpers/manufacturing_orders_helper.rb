@@ -1,0 +1,2 @@
+module ManufacturingOrdersHelper
+end
