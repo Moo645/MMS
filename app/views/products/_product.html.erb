@@ -1,0 +1,11 @@
+<tr id="<%= dom_id product %>">
+  <td id="<%= dom_id product %>">
+    <%= product.id %>
+  </td>
+  <td id="<%= dom_id product %>">
+    <%= product.product_no %>
+  </td>
+  <td id="<%= dom_id product %>">
+    <%= button_to "刪除產品", product, :method => "delete", class: 'button is-danger is-small' %>
+  </td>
+</tr>

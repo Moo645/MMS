@@ -1,21 +1,26 @@
-<%= render 'shared/search_products' %>
+<%= turbo_frame_tag 'new_product', target: '_top' do %>
+  <%= render 'form', product: @product %>
+<% end %>
+<hr>
 
-<table class="table is-hoverable is-fullwidth">
-  <thead>
-    <tr>
-    <th>產品ID</th>
-    <th>產品編號</th>
+<% turbo_frame_tag 'new_product', src: new_product_path(@product), target: '_top' %>
+<hr>
 
-    </tr>
-  </thead>
+<%= turbo_frame_tag 'product', target: '_top' do %>
+  <%= render 'shared/search_products' %>
 
-  <tbody>
-    <% @products.each do |m| %> 
+  <table class="table is-hoverable is-fullwidth">
+    <thead>
       <tr>
-        <td><%= m.id %></td>
-        <td><%= m.product_no %></td>
+      <th>產品ID</th>
+      <th>產品編號</th>
+      <th>動作</th>
       </tr>
-    <% end %>
-  </tbody>
-
-</table>
+    </thead>
+    <tbody>
+        <%= render partial: 'products/product', collection: @products %>
+    </tbody>
+  </table>
+<% end %>
+      <%= turbo_frame_tag 'product_table' do %>
+      <% end %>
